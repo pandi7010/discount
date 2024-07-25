@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discount Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <link rel="icon" href="logo.jpg">
+</head>
+<body>
+    <div class="container">
+        <div class="calculator">
+            <h1>Discount Calculator</h1>
+            <label for="originalPrice">Original Price (₹):</label>
+            <input type="number" id="originalPrice" placeholder="Enter the original price">
+            
+            <label for="discountPercentage">Discount Percentage (%):</label>
+            <input type="number" id="discountPercentage" placeholder="Enter discount percentage">
+            
+            <button onclick="calculateDiscount()">Calculate</button>
+            
+            <div id="result">
+                <p id="discountAmount"></p>
+                <p id="finalPrice"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Icon -->
+    <div class="about-icon" onclick="toggleAbout()">ℹ️</div>
+
+    <!-- Modal -->
+    <div id="aboutModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="toggleAbout()">&times;</span>
+            <h2>About the Developer</h2>
+            <img src="developer.jpg" alt="Pandiselvam" class="developer-photo">
+            <p><strong>Name:</strong> Pandiselvam</p>
+            <p><strong>Email:</strong> <a href="mailto:pandiselvam1216@gmail.com">pandiselvam1216@gmail.com</a></p>
+            <p><strong>Instagram:</strong> <a href="https://www.instagram.com/pandiselvam_official/?hl=en" target="_blank">@pandiselvam_official</a></p>
+            <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/pandiselvam-r/" target="_blank">R.Pandiselvam</a></p>
+            <p><strong>Github:</strong> <a href="https://github.com/pandi7010" target="_blank">Pandiselvam R</a></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

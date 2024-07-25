@@ -1,0 +1,193 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f0f4f8; /* Light background for comfort */
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    perspective: 1000px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.calculator {
+    background: #ffffff; /* White background for the calculator */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 400px;
+    transform: rotateX(0deg);
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+    box-sizing: border-box;
+}
+
+.calculator:hover {
+    transform: rotateX(5deg);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #007bff; /* Soft blue color */
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+}
+
+input {
+    width: calc(100% - 22px);
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ced4da; /* Soft gray border */
+    border-radius: 5px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: #007bff; /* Soft blue button */
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+
+button:hover {
+    background: #0056b3; /* Darker blue on hover */
+    transform: scale(1.05);
+}
+
+#result {
+    margin-top: 20px;
+}
+
+#result p {
+    font-size: 18px;
+    margin: 5px 0;
+    text-align: center;
+    color: #007bff; /* Soft blue color */
+}
+
+.about-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #ffffff;
+    background: #007bff; /* Soft blue background */
+    border-radius: 50%;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s, transform 0.2s;
+}
+
+.about-icon:hover {
+    background: #0056b3; /* Darker blue on hover */
+    transform: scale(1.1);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.4); /* Darker overlay for better contrast */
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal.show {
+    display: flex;
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-content {
+    background: #ffffff; /* White background for the modal */
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 500px;
+    width: 90%;
+    margin: auto;
+    position: relative;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transform: translateY(-30px);
+    transition: transform 0.3s ease;
+}
+
+.modal.show .modal-content {
+    transform: translateY(0);
+}
+
+.developer-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 4px solid #007bff; /* Soft blue border */
+}
+
+.modal-content h2 {
+    margin-top: 0;
+    color: #007bff; /* Soft blue color */
+}
+
+.modal-content p {
+    margin: 10px 0;
+    color: #333;
+}
+
+.modal-content a {
+    color: #007bff; /* Soft blue color */
+    text-decoration: none;
+}
+
+.modal-content a:hover {
+    text-decoration: underline;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #007bff; /* Soft blue color */
+    transition: color 0.3s ease;
+}
+
+.close:hover {
+    color: #0056b3; /* Darker blue on hover */
+}
